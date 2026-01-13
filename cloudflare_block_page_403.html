@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>403 - Доступ заборонено</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
+.bg-animation{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1}
+.particle{position:absolute;background:rgba(255,255,255,0.1);border-radius:50%;animation:float 15s infinite}
+.particle:nth-child(1){width:80px;height:80px;left:10%;animation-delay:0s}
+.particle:nth-child(2){width:60px;height:60px;left:70%;animation-delay:2s}
+.particle:nth-child(3){width:100px;height:100px;left:40%;animation-delay:4s}
+.particle:nth-child(4){width:50px;height:50px;left:80%;animation-delay:6s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg);opacity:0.3}50%{transform:translateY(-100px) rotate(180deg);opacity:0.6}}
+.container{max-width:600px;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:20px;padding:60px 40px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;z-index:2;animation:slideUp 0.6s ease-out}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.language-switcher{position:absolute;top:20px;right:20px;display:flex;gap:8px;background:rgba(255,255,255,0.9);padding:5px;border-radius:25px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.lang-btn{padding:8px 16px;border:none;background:transparent;color:#4a5568;font-weight:600;font-size:13px;border-radius:20px;cursor:pointer;transition:all 0.3s}
+.lang-btn:hover{background:rgba(102,126,234,0.1)}
+.lang-btn.active{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;box-shadow:0 2px 8px rgba(102,126,234,0.3)}
+.company-logo{margin-bottom:20px}
+.company-logo img{max-width:200px;height:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.1))}
+.shield-icon{width:120px;height:120px;margin:0 auto 30px;position:relative;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.shield-icon svg{width:100%;height:100%;filter:drop-shadow(0 4px 12px rgba(102,126,234,0.4))}
+h1{font-size:48px;color:#2d3748;margin-bottom:15px;font-weight:700}
+.error-code{color:#667eea;font-size:24px;font-weight:600;margin-bottom:20px}
+.message{font-size:18px;color:#4a5568;line-height:1.6;margin-bottom:30px}
+.info-box{background:#f7fafc;border-left:4px solid #667eea;padding:20px;border-radius:8px;text-align:left;margin-bottom:30px}
+.info-box h3{color:#2d3748;font-size:16px;margin-bottom:10px;font-weight:600}
+.info-box ul{list-style:none;padding-left:0}
+.info-box li{color:#4a5568;font-size:14px;padding:5px 0;padding-left:25px;position:relative}
+.info-box li:before{content:"•";color:#667eea;font-weight:bold;position:absolute;left:8px}
+.cloudflare-badge{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:30px;padding-top:20px;border-top:1px solid #e2e8f0;font-size:14px;color:#718096}
+.cloudflare-logo{width:24px;height:24px}
+.button{display:inline-block;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;transition:transform 0.3s,box-shadow 0.3s;box-shadow:0 4px 15px rgba(102,126,234,0.4)}
+.button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(102,126,234,0.6)}
+.contact-link{margin-top:25px;font-size:14px;color:#4a5568}
+.contact-link a{color:#667eea;text-decoration:none;font-weight:600;transition:color 0.3s}
+.contact-link a:hover{color:#764ba2;text-decoration:underline}
+@media (max-width:768px){
+.container{padding:40px 30px}
+h1{font-size:36px}
+.error-code{font-size:20px}
+.message{font-size:16px}
+.company-logo img{max-width:150px}
+.language-switcher{position:static;margin-bottom:20px;justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="bg-animation">
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+</div>
+<div class="container">
+<div class="language-switcher">
+<button class="lang-btn active" data-lang="uk">УКР</button>
+<button class="lang-btn" data-lang="en">ENG</button>
+</div>
+<div class="company-logo">
+<img src="https://sgtas.ua/storage/static_images/f72xl5wbFHlLEuzSKTonsbdizPdXlQkmNk39iHOD.svg" alt="SGTAS Logo">
+</div>
+<div class="shield-icon">
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z" fill="#667eea" stroke="#764ba2" stroke-width="1.5"/>
+<path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+<h1 class="lang-text" data-uk="Доступ заборонено" data-en="Access Denied">Доступ заборонено</h1>
+<div class="error-code lang-text" data-uk="Помилка 403" data-en="Error 403">Помилка 403</div>
+<p class="message lang-text" data-uk="Ваш запит було заблоковано системою безпеки Cloudflare Web Application Firewall (WAF)." data-en="Your request has been blocked by Cloudflare Web Application Firewall (WAF) security system.">Ваш запит було заблоковано системою безпеки Cloudflare Web Application Firewall (WAF).</p>
+<div class="info-box">
+<h3 class="lang-text" data-uk="Чому це сталося?" data-en="Why did this happen?">Чому це сталося?</h3>
+<ul>
+<li class="lang-text" data-uk="Ваш запит містив підозрілу активність" data-en="Your request contained suspicious activity">Ваш запит містив підозрілу активність</li>
+<li class="lang-text" data-uk="IP-адреса може бути в списку блокування" data-en="IP address may be on the blocklist">IP-адреса може бути в списку блокування</li>
+<li class="lang-text" data-uk="Виявлено потенційну загрозу безпеці" data-en="Potential security threat detected">Виявлено потенційну загрозу безпеці</li>
+<li class="lang-text" data-uk="Порушення правил брандмауера веб-додатків" data-en="Web application firewall rules violation">Порушення правил брандмауера веб-додатків</li>
+</ul>
+</div>
+<a href="javascript:history.back()" class="button lang-text" data-uk="Повернутися назад" data-en="Go Back">Повернутися назад</a>
+<div class="contact-link">
+<p class="lang-text" data-uk="Якщо ви вважаєте, що це помилка, будь ласка, <a href='https://sgtas.ua/contacts/' target='_blank'>зв'яжіться з нами</a>" data-en="If you believe this is an error, please <a href='https://sgtas.ua/contacts/' target='_blank'>contact us</a>">Якщо ви вважаєте, що це помилка, будь ласка, <a href="https://sgtas.ua/contacts/" target="_blank">зв'яжіться з нами</a></p>
+</div>
+<div class="cloudflare-badge">
+<svg class="cloudflare-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 10.5C16.5 10.5 17.5 9.5 17.5 7.5C17.5 5.5 16 4 14 4C12 4 10.5 5.5 10.5 7.5" stroke="#F38020" stroke-width="2" stroke-linecap="round"/>
+<path d="M7.5 10.5H19.5L20.5 14.5H6.5L7.5 10.5Z" fill="#F38020"/>
+<path d="M6.5 14.5L5.5 18.5H21.5L20.5 14.5H6.5Z" fill="#FAAE40"/>
+</svg>
+<span class="lang-text" data-uk="Захищено Cloudflare" data-en="Protected by Cloudflare">Захищено Cloudflare</span>
+</div>
+</div>
+<script>
+const b=document.querySelectorAll('.lang-btn'),t=document.querySelectorAll('.lang-text');
+b.forEach(n=>n.addEventListener('click',()=>{
+const l=n.dataset.lang;
+b.forEach(x=>x.classList.remove('active'));
+n.classList.add('active');
+t.forEach(e=>{
+const txt=e.dataset[l];
+if(txt){
+if(e.tagName==='P'&&e.parentElement.classList.contains('contact-link')){
+e.innerHTML=txt;
+}else{
+e.textContent=txt;
+}
+}
+});
+}));
+</script>
+</body>
+</html>
